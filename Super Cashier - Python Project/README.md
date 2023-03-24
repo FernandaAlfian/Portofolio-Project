@@ -35,6 +35,7 @@ Berikut adalah penjelasan dari file di atas.
 
 Modul `main.py`
 
+Mothod ``__init__()``
 ```py 
     def __init__(self):
 
@@ -43,6 +44,7 @@ Modul `main.py`
 ```
 
 
+Mothod ``checklist_list_order()``
 ```py 
     def check_list_order(self):
         """
@@ -64,7 +66,7 @@ Modul `main.py`
         print ("\n")
 ```
 
-
+Mothod ``add_item()``
 ```py 
    def add_item(self):
         """
@@ -141,6 +143,7 @@ Modul `main.py`
 
 ```
 
+Mothod ``update_name_item()``
 ```py 
     def update_name_item(self):
         """
@@ -213,6 +216,7 @@ Modul `main.py`
 
 ```
 
+Mothod ``update_quantity_item()``
 ```py 
    def update_quantity_item(self):
         """
@@ -295,6 +299,7 @@ Modul `main.py`
 
 ```
 
+Mothod ``update_price_item()``
 ```py 
     def update_price_item(self):
         """
@@ -373,6 +378,7 @@ Modul `main.py`
   
 ```
 
+Mothod ``delete_item()``
 ```py 
     def delete_item(self):
         """
@@ -433,6 +439,7 @@ Modul `main.py`
 
 ```
 
+Mothod ``reset_order()``
 ```py 
     def reset_order(self):
         """
@@ -470,6 +477,7 @@ Modul `main.py`
    
 ```
 
+Mothod ``list_order()``
 ```py 
     def list_order(self):
                 """
@@ -488,6 +496,7 @@ Modul `main.py`
   
 ```
 
+Mothod ``total_price()``
 ```py 
     def total_price(self):
                 """"
@@ -529,6 +538,7 @@ Modul `main.py`
   
 ```
 
+Mothod ``exit()``
 ```py 
     def exit(self):
         """"
@@ -542,6 +552,7 @@ Modul `main.py`
 
 
 Modul `menu.py`
+
 
 ```py
 def add_item():
@@ -667,9 +678,9 @@ Test
     ```
 
     Output Realization:
-    ```
 
-    ```
+    ![Test Case 1](https://user-images.githubusercontent.com/98755428/227463064-a0f2198b-f372-4afd-b9ef-46aaeb10fa09.png)
+
 2. Customer ingin menghapus salah satu item yang sudah ditambahkan menggunakan method `delete_item()`. Item yang akan dihapus adalah item Pasta Gigi.
 
     Expected Output:
@@ -679,9 +690,9 @@ Test
     ```
 
     Output Realization:
-    ```
+    
+    ![Test Case 2](https://user-images.githubusercontent.com/98755428/227463181-aed7aeb9-323b-417e-81ad-80774ef6e105.png)
 
-    ```
 
 3. Customer ingin menghapus seluruh item yang telah diinput, method yang digunakan adalah `reset_transaction()`.
 
@@ -692,9 +703,9 @@ Test
     ```
 
     Output Realization:
-    ```
+    
+    ![Test Case 3](https://user-images.githubusercontent.com/98755428/227463249-51067101-ea8d-40ea-a16d-325a24d4a5a4.png)
 
-    ```
 
 4. Customer menginputkan kembali item yang akan dibeli.
     - Item: Ayam Goreng, Quantity: 2, Harga: 20000
@@ -709,11 +720,11 @@ Test
     ```
 
     Output Realization:
-    ```
+    
+    ![Test Case 4](https://user-images.githubusercontent.com/98755428/227463288-e19bbb03-6a0d-4fe1-acf2-594de4099595.png)
 
-    ```
 
-5. Customer ingin menghitung total belanja yang telah ada pada keranjang menggunakan method `total_price()`. Sebelum mengeluarkan output total harga belanja, program harus menampilkan barang dalam keranjang. 
+5. Customer ingin menghitung total belanja yang telah ada pada keranjang menggunakan method `total_price()`. 
 
     Expected Output:
 
@@ -724,18 +735,15 @@ Test
     ```
 
     Output Realization:
-    ```
+    
+    ![Test Case 5](https://user-images.githubusercontent.com/98755428/227463334-f319a599-7c9c-49d0-8f07-785b0a23da5a.png)
 
-    ```
 # Conclution
 
+Berdasarkan requrements yang ada pada promblem case cashier ini, seluruh requremetns dapat dijalankan sesuai dengan ekspetkasi yang diinginkan, dan terdapat pernyesuaian dalam pengerjaannya untuk dapat lebih mempermudah consumer dalam menggunakan program super cashier ini. Program sederhana super cashier dapat digunakan, dan masih dapat dilakukan pengembangan di kemudian hari.
+
 # Future Development
--t, --highlight-text=STR	Text to be highlighted.
--c, --colors=FgColor[,BgColor]	The foreground and background color used to highlight the specified text. See the list of available colors below.
--s, --case-sensitive=1/0	Consider the character case when searching for the text to highlight. By default -s=0 (not case sensitive)
--l, --log-colors	Highlight some special words used in the logs such as Error, Failed, Warning, Success etc.
--h, --help	Show this help.
--V, --version	Show application version.
---license	Display program license.
---home
+
+1. Agar dapat juga menggunakan Graphic User Interface agar tampilan lebih interaktif
+2. Dapat membuat dictionary untuk masing2 transaction ID, sehingga dapat menampung data transaction pada masing2 user.
 

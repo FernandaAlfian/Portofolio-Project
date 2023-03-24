@@ -20,12 +20,20 @@ Super Cashier adalah program self-service cashier supermarket sederhana untuk co
 ![Flowchart Super Cashier](https://user-images.githubusercontent.com/98755428/227398802-b7402b40-2d17-4a89-a334-dbee3bdbe87d.png)
 
 
+
 # Program Functions
 
+Project ini memiliki 3 file, `modul.py`, `menu.py`, `main.py`.
+1. `modul.py`
+    File ini berisi class Transaction yang menampung berbagai fungsi untuk dapat dipakai pada file menu. 
+2. `menu.py`
+    File ini berisi main menu, dan fungsi lain dari class Transaction untuk dapat dipilih consumer pada main menu.
+3. `main.py`
+    File ini adalah file untuk menjalankan main menu dari super cashier
 
+Berikut adalah penjelasan dari file di atas.
 
-=========================================================
-
+Modul `main.py`
 
 ```py 
     def __init__(self):
@@ -533,13 +541,192 @@ Super Cashier adalah program self-service cashier supermarket sederhana untuk co
 ```
 
 
+Modul `menu.py`
 
-=====================================================================
+```py
+def add_item():
+    trnsct_123.add_item()
+    menu()
 
+def update_name_item():
+    trnsct_123.update_name_item()
+    menu()
+
+def update_quantity_item():
+    trnsct_123.update_quantity_item()
+    menu()
+
+def update_price_item():
+    trnsct_123.update_price_item()
+    menu()
+
+def delete_item():
+    trnsct_123.delete_item()
+    menu()
+
+def reset_order() :
+    trnsct_123.reset_order()
+    menu()
+
+def list_order():
+    trnsct_123.list_order()
+    menu()
+
+def total_price():
+    trnsct_123.total_price()
+    menu()
+
+def exit():
+    trnsct_123.exit()
+
+
+def menu():
+    """
+    Daftar fitur Super Cashier
+    Input angka sesuai daftar yg ada untuk menjalankan fitur
+    """
+    print("\n------------ Super Cashier -------------")
+    print("\n-------------- App Menu ----------------")
+    print("""
+    1. Add Item
+    2. Update Item Name
+    3. Update Item Quantity
+    4. Update Item Price
+    5. Delete Item
+    6. Reset Transaction
+    7. Check Order
+    8. Total Price
+    9. Exit
+    """)
+    print("----------------------------------------\n")
+
+
+    while True:
+        fitur = int(input("Pilih menu yang ingin dipilih: "))
+        if fitur <= 0 or fitur >= 10:
+            print("Mohon agar dapat diisi angka pada menu")
+            continue
+        else:
+            pass
+        break
+
+
+    if fitur == 1:
+        add_item()
+
+    elif fitur == 2:
+        update_name_item()
+
+    elif fitur == 3:
+        update_quantity_item()
+    
+    elif fitur == 4: 
+        update_price_item()
+
+    elif fitur == 5: 
+        delete_item()
+
+    elif fitur == 6: 
+        reset_order()
+
+    elif fitur == 7: 
+        list_order()
+
+    elif fitur == 8: 
+        total_price()
+
+    elif fitur == 9: 
+        exit()
+        return
+        
+```
+
+Modul `main.py`
+
+```py
+import menu
+
+menu.menu()
+```
 
 
 # Test Case
 
+Pada tahap ini akan dilakukan test code, untuk dapat melihat output yang dikeluarkan sudah sesuai dengan ekspektasi yang diinginkan.
+
+Test
+
+1. Customer ingin menambahkan dua item baru menggunakan method `add_item()`. Item yang akan ditambahkan sebagai berikut:
+    - Nama Item: Ayam Goreng, Quantity 2, Harga: 20000
+    - Nama Item: Pasta Gigi, Quantity 3, Harga: 15000
+
+    Expected Output:
+
+    ```
+    Item yang dibeli adalah: {'Ayam Goreng': [2, 20000], 'Pasta Gigi': [3, 15000]}
+    ```
+
+    Output Realization:
+    ```
+
+    ```
+2. Customer ingin menghapus salah satu item yang sudah ditambahkan menggunakan method `delete_item()`. Item yang akan dihapus adalah item Pasta Gigi.
+
+    Expected Output:
+
+    ```
+    {'Ayam Goreng': [2, 20000]}
+    ```
+
+    Output Realization:
+    ```
+
+    ```
+
+3. Customer ingin menghapus seluruh item yang telah diinput, method yang digunakan adalah `reset_transaction()`.
+
+    Expected Output:
+
+    ```
+    Semua item berhasil di delete!
+    ```
+
+    Output Realization:
+    ```
+
+    ```
+
+4. Customer menginputkan kembali item yang akan dibeli.
+    - Item: Ayam Goreng, Quantity: 2, Harga: 20000
+    - Item: Pasta Gigi, Quantity: 3, Harga: 15000
+    - Item: Mainan Mobil, Quantity: 1, Harga: 200000
+    - Item: Mi Instan, Quantity: 5, Harga: 3000
+
+    Expected Output:
+
+    ```
+    Item yang dibeli adalah: {'Ayam Goreng': [2, 20000], 'Pasta Gigi': [3, 15000], 'Mainan Mobil': [1, 200000], 'Mi Instan': [5, 3000]}
+    ```
+
+    Output Realization:
+    ```
+
+    ```
+
+5. Customer ingin menghitung total belanja yang telah ada pada keranjang menggunakan method `total_price()`. Sebelum mengeluarkan output total harga belanja, program harus menampilkan barang dalam keranjang. 
+
+    Expected Output:
+
+    ```
+    Item yang dibeli adalah: {'Ayam Goreng': [2, 20000], 'Pasta Gigi': [3, 15000], 'Mainan Mobil': [1, 200000], 'Mi Instan': [5, 3000]}
+    
+    Total Belanja yang harus dibayarkan adalah: Rp. 285000.0
+    ```
+
+    Output Realization:
+    ```
+
+    ```
 # Conclution
 
 # Future Development

@@ -35,7 +35,7 @@ Berikut adalah penjelasan dari file di atas.
 
 Modul `main.py`
 
-Mothod ``__init__()``
+Method ``__init__()``
 ```py 
     def __init__(self):
 
@@ -44,7 +44,7 @@ Mothod ``__init__()``
 ```
 
 
-Mothod ``checklist_list_order()``
+Method ``checklist_list_order()``
 ```py 
     def check_list_order(self):
         """
@@ -66,7 +66,7 @@ Mothod ``checklist_list_order()``
         print ("\n")
 ```
 
-Mothod ``add_item()``
+Method ``add_item()``
 ```py 
    def add_item(self):
         """
@@ -143,7 +143,7 @@ Mothod ``add_item()``
 
 ```
 
-Mothod ``update_name_item()``
+Method ``update_name_item()``
 ```py 
     def update_name_item(self):
         """
@@ -216,7 +216,7 @@ Mothod ``update_name_item()``
 
 ```
 
-Mothod ``update_quantity_item()``
+Method ``update_quantity_item()``
 ```py 
    def update_quantity_item(self):
         """
@@ -299,7 +299,7 @@ Mothod ``update_quantity_item()``
 
 ```
 
-Mothod ``update_price_item()``
+Method ``update_price_item()``
 ```py 
     def update_price_item(self):
         """
@@ -378,7 +378,7 @@ Mothod ``update_price_item()``
   
 ```
 
-Mothod ``delete_item()``
+Method ``delete_item()``
 ```py 
     def delete_item(self):
         """
@@ -439,7 +439,7 @@ Mothod ``delete_item()``
 
 ```
 
-Mothod ``reset_order()``
+Method ``reset_order()``
 ```py 
     def reset_order(self):
         """
@@ -477,7 +477,7 @@ Mothod ``reset_order()``
    
 ```
 
-Mothod ``list_order()``
+Method ``list_order()``
 ```py 
     def list_order(self):
                 """
@@ -496,7 +496,7 @@ Mothod ``list_order()``
   
 ```
 
-Mothod ``total_price()``
+Method ``total_price()``
 ```py 
     def total_price(self):
                 """"
@@ -538,7 +538,7 @@ Mothod ``total_price()``
   
 ```
 
-Mothod ``exit()``
+Method ``exit()``
 ```py 
     def exit(self):
         """"

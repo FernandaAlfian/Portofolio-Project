@@ -10,7 +10,8 @@
 1. **Brand Awareness:**
    - Metrics of Focus: Ad Recall Rate, Engagement Rate
 
-[Image]
+![BrandAwarenss](https://github.com/FernandaAlfian/Portofolio-Project/assets/98755428/cae1d62d-ef6b-4bc4-8393-0eafd99860dd)
+
 
 
    **Insights:**
@@ -20,7 +21,8 @@
 2. **Highest Traffic Ads:**
    - Metrics of Focus: Click-Through Rate (CTR) and Cost Per Click (CPC)
 
-[Image]
+![HighTraffic](https://github.com/FernandaAlfian/Portofolio-Project/assets/98755428/dd246780-4106-4293-a11e-adeb04000332)
+
 
    **Insights:**
    - Type A has the highest CTR across multiple months, indicating strength in encouraging clicks.
@@ -31,7 +33,8 @@
 3. **Efficiency Consideration:**
    - Metrics of Focus: CTR, CPC, Engagement Rate, Ad Recall
 
-[Image]
+![image](https://github.com/FernandaAlfian/Portofolio-Project/assets/98755428/79eb2a7c-b508-43f9-9b78-c80a68bc860c)
+
 
    **Insights:**
    - Type D has the highest CPC and consistently lower CTR, engagement rate, and ad recall rate, indicating a need for improvement.
@@ -56,7 +59,8 @@
 
 Explore the visualized data on Tableau for a more interactive experience:
 
-- [Marketing Campaign Analysis on Tableau](#) [https://public.tableau.com/views/MarketingPerformanceDashboard_17035092258730/Dashboard1?:language=en-US&:display_count=n&:origin=viz_share_link]
+- [Marketing Campaign Analysis on Tableau](https://public.tableau.com/views/MarketingPerformanceDashboard_17035092258730/Dashboard1?:language=en-US&:display_count=n&:origin=viz_share_link)
+
 
 ## Conclusion
 

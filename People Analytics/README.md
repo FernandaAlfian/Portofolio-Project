@@ -18,6 +18,12 @@ The objective of this project is to analyze the provided data to assess employee
 - Python for data exploration
 - Tableau for creating the analytics dashboard
 
+## Tableau Visualizations
+
+Explore the visualized data on Tableau for a more interactive experience:
+
+- [People Turnover and Performance Dashboard](https://public.tableau.com/app/profile/fernanda.alfian/viz/PeopleTurnoverandPerformanceDashboard/Dashboard1?publish=yes)
+
 ## Turnover Analysis
 
 ### Questions

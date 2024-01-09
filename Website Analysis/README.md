@@ -35,6 +35,8 @@ GROUP BY 1, 2
 ORDER BY 1,2;
 ```
 
+![Trend Product](https://github.com/FernandaAlfian/Portofolio-Project/assets/98755428/4674d548-0837-4137-a9ca-9b4b9c1e072f)
+
 Insights: Seen sales, revenue, and margin increase every month
 
 
@@ -67,6 +69,8 @@ WHERE WS.created_at BETWEEN DATE('2012-04-01') AND DATE('2013-04-05')
 GROUP BY 1, 2
 ;
 ```
+
+![New Product Analysis](https://github.com/FernandaAlfian/Portofolio-Project/assets/98755428/0f52fcf4-4972-4057-9077-8301a915ed6b)
 
 Insights: New products are starting to increase sales
 
@@ -114,6 +118,7 @@ JOIN primary_product_cte
 	USING(primary_product_id)
 GROUP BY 1;
 ```
+![Cross Selling](https://github.com/FernandaAlfian/Portofolio-Project/assets/98755428/4cbf0e65-30db-44ff-8166-ea06d238a7be)
 
 Insights: Cross-sell happened most on the first product
 
@@ -140,6 +145,51 @@ SELECT repeat_count
 FROM repeat_user_cte
 GROUP BY 1;
 ```
+![Repeat users](https://github.com/FernandaAlfian/Portofolio-Project/assets/98755428/18617414-f8d2-41e8-9ff6-edfdfb7be288)
 
 Insights: There are many users who come back to the website after their first visit.
 
+
+### Repeat Channel Behaviour Analysis
+
+The results of the previous analysis caught the attention of the marketing manager, who was interested in looking deeper into repeat customers. He contacted you on June 8, 2014.
+
+The marketing manager wants to know which channel/source the user uses when visiting again. He wants to see if they came through direct type-in or through a paid campaign organized by the company.
+
+You are asked to compare the number of new and repeat sessions by channel/source
+
+
+| utm_source | utm_campaign | http_referer                                      | channel_group |
+|------------|--------------|---------------------------------------------------|----------------|
+| NULL       |          | 'https://www.gsearch.com', 'https://www.bsearch.com' | organic_search |
+|        | nonbrand     |                                                   | paid_nonbrand  |
+|        | brand        |                                                   | paid_brand     |
+| NULL       |          | NULL                                              | direct_type_in |
+| socialbook |          |                                                   | paid_social    |
+
+
+
+```sql
+-- SQL query for repeat channel behaviour analysis
+
+SELECT 
+	CASE
+		WHEN utm_source IS NULL AND http_referer IN('https://www.gsearch.com', 'https://www.bsearch.com') THEN 'organic_search'
+        WHEN utm_source IS NOT NULL AND utm_campaign = 'nonbrand' THEN 'paid_nonbrand'
+        WHEN utm_source IS NOT NULL AND utm_campaign = 'brand' THEN 'paid_brand'
+        WHEN utm_source IS NULL AND http_referer IS NULL THEN 'direct_type_in'
+        WHEN utm_source	= 'socialbook' THEN 'paid_social'
+		ELSE ""
+    END as channel_group
+    , COUNT(CASE WHEN is_repeat_session = 0 THEN website_session_id ELSE NULL END) as new_sessinos
+    , COUNT(CASE WHEN is_repeat_session = 1 THEN website_session_id ELSE NULL END) as repeat_sessions
+    
+FROM website_sessions
+WHERE created_at  BETWEEN DATE('2014-01-01') AND DATE('2014-06-08')
+GROUP BY 1
+ORDER BY 3 DESC;
+
+```
+![repeat channel ](https://github.com/FernandaAlfian/Portofolio-Project/assets/98755428/ca79ecdb-3842-4f96-872a-4f54ff9cc077)
+
+Insights: It can be seen that when users make return visits, they come from organic search, direct type-in and paid brands.

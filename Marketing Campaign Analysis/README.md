@@ -51,7 +51,7 @@
       - Decision: Emphasize Type A for driving traffic due to its high CTR and cost-effectiveness.
       - Improvement Needed: Optimize creatives to enhance engagement rates and maximize traffic potential.
 
-   - **Areas for Improvement: Type B and Type D**
+   - **Areas for Improvement: Type B, Type C and Type D**
       - Decision: Implement targeted improvements in creatives, targeting, or messaging to enhance overall campaign performance.
       - Improvement Needed: Regularly conduct A/B testing and analyze performance metrics to refine and optimize campaigns.
 
